@@ -64,7 +64,7 @@ body {
     display: none; /*invisible when page is loaded */
     position: fixed;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 0, 0, 0.4);
 }
 
 .overlay.open {
@@ -95,6 +95,12 @@ body {
     height: 15px;
     border-radius: 50%;
     margin-right: 30px;
+    border-color: transparent;
+    transition: 0.5ms;
+}
+
+.dot:hover {
+    filter: brightness(0.8);
 }
 
 #dot-close  { background-color: #ff5f57; }
