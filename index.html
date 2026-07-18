@@ -6,17 +6,39 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css"></head>
 <body>
-
     <div class="card-container">
-    <div class="topBar"></div>
-    <div class="greeting">hi! I am Hugh</div>
-    <div class="menu">
-        <div class="menu-item">about me</div>
-        <div class="menu-item">projects</div>
-        <div class="menu-item">contacts</div>
+        <div class="top-bar"></div>
+        <div class="greeting">hi! I am Hugh</div>
+        <div class="menu">
+            <button class="menuButton" id="aboutMe">
+                <img src="images/me icon.png" alt="about me">
+                about me
+            </button>
+
+            <button class="menuButton" id="projects">
+                <img src="images/folder icon.png" alt="projects">
+                projects
+            </button>
+
+            <button class="menuButton" id="contact">
+                <img src="images/email icon.png" alt="contact">
+                contact
+            </button>
+        </div>
     </div>
 
-</div>
+
+    <div class="overlay" id="overlay-about">
+        <div class="modal">
+            <div class="modal-top-bar">
+                <div class="dot" id="dot-close"></div>
+            </div>
+            <div class="modal-body">
+                <h2>About Me</h2>
+                <p>Your content here</p>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
