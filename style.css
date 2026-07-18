@@ -65,12 +65,26 @@ body {
     position: fixed;
     inset: 0;
     background-color: rgba(255, 0, 0, 0.4);
+
 }
 
 .overlay.open {
     display: flex;
     align-items: center;
     justify-content: center;
+
+
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .modal {
@@ -78,6 +92,7 @@ body {
     border-radius: 25px;
     width: 400px;
     overflow: hidden;
+    animation: popIn 0.18s ease;
 }
 
 .modal-top-bar {
