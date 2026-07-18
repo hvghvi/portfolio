@@ -7,10 +7,18 @@ let zTop = 100
 // open
 function openModal(name) {
     const modal = document.getElementById('modal-' + name)
-    modal.classList.add('open')
+    
+    modal.style.display = 'flex'  // make it visible first
+    
+    // now it has a size, calculate center
+    modal.style.left = (window.innerWidth / 2 - modal.offsetWidth / 2) + 'px'
+    modal.style.top = (window.innerHeight / 2 - modal.offsetHeight / 2) + 'px'
+    modal.style.transform = 'none'
     modal.style.zIndex = ++zTop
-    modal.style.transform = 'translate(-50%, -50%)'  // reset position to center
+
+    modal.classList.add('open')  // triggers animation after position is set
 }
+
 
 // close with animation
 function closeModal(name) {
@@ -21,6 +29,7 @@ function closeModal(name) {
     modal.addEventListener('animationend', () => {
         modal.classList.remove('open')
         modal.classList.remove('closing')
+        modal.style.display = 'none'  // add this
     }, { once: true })
 }
 

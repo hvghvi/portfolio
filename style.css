@@ -14,6 +14,7 @@ body {
     height: 300px;
     overflow: hidden; 
     box-shadow: 5px 5px 5px darkgray;
+    user-select: none;
 }
 
 
@@ -62,38 +63,37 @@ body {
 
 @keyframes popIn {
     0% {
-        transform: translate(-50%, -50%) scale(0.9);
+        transform: scale(0.9);
         opacity: 0;
     }
     60% {
-        transform: translate(-50%, -50%) scale(1.05);
+        transform: scale(1.05);
         opacity: 1;
     }
     100% {
-        transform: translate(-50%, -50%) scale(1);
+        transform: scale(1);
         opacity: 1;
     }
 }
 
 @keyframes popOut {
     0% {
-        transform: translate(-50%, -50%) scale(1);
+        transform: scale(1);
         opacity: 1;
     }
     40% {
-        transform: translate(-50%, -50%) scale(1.08);
+        transform: scale(1.08);
         opacity: 1;
     }
     100% {
-        transform: translate(-50%, -50%) scale(0.9);
+        transform: scale(0.9);
         opacity: 0;
     }
 }
+
 .modal {
     display: none;
     position: fixed;
-    top: 50%;
-    left: 50%;
     background-color: lightgray;
     border-radius: 16px;
     width: 400px;
@@ -104,7 +104,6 @@ body {
 
 
 .modal.open {
-    display: flex;
     animation: popIn 0.18s ease;
 }
 
