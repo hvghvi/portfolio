@@ -97,3 +97,11 @@ function removeActiveClass() {
     btn.classList.remove('active');
   })
 }
+
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode')
+    const icon = document.getElementById('darkmode-icon')
+    icon.src = document.body.classList.contains('dark-mode') ? 'images/sun.svg' : 'images/moon.svg'
+}
+
+
