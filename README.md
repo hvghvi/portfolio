@@ -1,5 +1,5 @@
 # Personal Website
-This is my personal website, built with HTML, CSS, and Vanilla JavaScript.
+This is my personal website, built with HTML, CSS, and Vanilla JavaScript.   
 It showcases my projects, skills, and contact information through an interactive interface.
 
 ## About
