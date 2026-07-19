@@ -37,8 +37,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     margin: 0;
-    font-size: 13px;
-    color: white;
+    font-weight: 600; font-size: 13px; color: #555; text-transform: uppercase; letter-spacing: 0.06em; 
 }
 
 
@@ -156,4 +155,10 @@ body {
 .modal-body {
     padding: 20px;
 }
+.modal-section { font-weight: 600; font-size: 13px; color: #555; margin: 16px 0 6px; text-transform: uppercase; letter-spacing: 0.06em; }
 
+.modal-section + p {
+    font-size: 11px;
+    color: #626262;
+    line-height: 1.7;
+}
