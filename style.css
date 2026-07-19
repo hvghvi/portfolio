@@ -302,3 +302,16 @@ nav a.active {
     color: #0a8b0a;
     font-size: 11px;
 }
+
+.project-row img {
+    width: 500px;
+    height: auto;
+}
+
+.lang {
+    font-style: italic;
+}
+
+.project-text p {
+    max-width: 500px;
+}
