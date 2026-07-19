@@ -8,6 +8,8 @@ let zTop = 100
 function openModal(name) {
     const modal = document.getElementById('modal-' + name)
     
+    if (modal.classList.contains('open')) return  // do nothing if already open
+
     modal.style.display = 'flex'  // make it visible first
     
     // now it has a size, calculate center
