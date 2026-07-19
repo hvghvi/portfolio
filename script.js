@@ -43,7 +43,6 @@ document.querySelectorAll('.modal').forEach(modal => {
 
 //for drag:
 //mousedown + mousemove + mouseup
-
 document.querySelectorAll('.modal-top-bar').forEach(titlebar => {
     titlebar.addEventListener('mousedown', (e) => {
         if (e.target.classList.contains('dot')) return

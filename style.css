@@ -28,7 +28,19 @@ body {
     height: 10px;
     padding: 10px 16px;
     margin-bottom: 20px; 
+    display: flex;
+    align-items: center;
+    position: relative; /* add this */
 }
+.modal-top-bar p {
+    position: absolute; 
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 13px;
+    color: white;
+}
+
 
 .menu {
     display: flex;
@@ -46,6 +58,7 @@ body {
     cursor: pointer;
     align-items: center;
     transition: transform 0.2s ease-in-out;
+    gap: 6px; 
 }
 
 .menuButton:hover {
