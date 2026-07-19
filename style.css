@@ -14,7 +14,17 @@ body {
     align-items: center; 
     height: 100vh;
     font-family: roboto, sans-serif;
-  
+    flex-direction: column; 
+}
+
+.darkmode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1000; 
 }
 
 .card-container {
