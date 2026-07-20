@@ -32,7 +32,12 @@ function closeModal(name) {
     modal.addEventListener('animationend', () => {
         modal.classList.remove('open')
         modal.classList.remove('closing')
-        modal.style.display = 'none'  // add this
+        modal.style.display = 'none'  
+        if (isMobile()) {
+            modal.style.left = ''
+            modal.style.top = ''
+            modal.style.transform = ''
+        }
     }, { once: true })
 }
 
