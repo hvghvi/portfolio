@@ -33,14 +33,19 @@ function closeModal(name) {
     const modal = document.getElementById('modal-' + name)
     modal.classList.add('closing')
 
-    modal.addEventListener('animationend', () => {
+    const cleanup = () => {
         modal.classList.remove('open')
         modal.classList.remove('closing')
         modal.style.display = 'none'
         modal.style.left = ''
         modal.style.top = ''
         modal.style.transform = ''
-    }, { once: true })
+    }
+
+    modal.addEventListener('animationend', cleanup, { once: true })
+
+    // iOS Safari fallback — if animationend doesn't fire, clean up manually
+    setTimeout(cleanup, 300)
 }
 
 // clicking a modal brings it to front
