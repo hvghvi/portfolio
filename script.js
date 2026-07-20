@@ -3,7 +3,8 @@ let offsetX = 0
 let offsetY = 0
 let draggedModal = null
 let zTop = 100
-const isMobile = () => window.innerWidth <= 768
+const isMobile = () => 'ontouchstart' in window || window.innerWidth <= 768
+
 
 // open
 function openModal(name) {
@@ -63,7 +64,14 @@ document.querySelectorAll('.modal-top-bar').forEach(titlebar => {
         offsetX = e.clientX - draggedModal.getBoundingClientRect().left
         offsetY = e.clientY - draggedModal.getBoundingClientRect().top
     })
+
+        // block touch dragging on mobile
+    titlebar.addEventListener('touchstart', (e) => {
+        if (isMobile()) e.stopPropagation()
+    })
 })
+
+
 
 
 document.addEventListener('mousemove', (e) => {
