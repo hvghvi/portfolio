@@ -3,8 +3,7 @@ let offsetX = 0
 let offsetY = 0
 let draggedModal = null
 let zTop = 100
-const isMobile = () => 'ontouchstart' in window || window.innerWidth <= 768
-
+const isMobile = () => 'ontouchstart' in window
 
 // open
 function openModal(name) {
@@ -13,7 +12,12 @@ function openModal(name) {
 
     modal.style.display = 'flex'
 
-    if (!isMobile()) {
+    if (isMobile()) {
+        // clear any leftover inline styles, let CSS take over
+        modal.style.left = ''
+        modal.style.top = ''
+        modal.style.transform = ''
+    } else {
         modal.style.left = (window.innerWidth / 2 - modal.offsetWidth / 2) + 'px'
         modal.style.top = (window.innerHeight / 2 - modal.offsetHeight / 2) + 'px'
         modal.style.transform = 'none'
@@ -64,13 +68,7 @@ document.querySelectorAll('.modal-top-bar').forEach(titlebar => {
         offsetX = e.clientX - draggedModal.getBoundingClientRect().left
         offsetY = e.clientY - draggedModal.getBoundingClientRect().top
     })
-
-        // block touch dragging on mobile
-    titlebar.addEventListener('touchstart', (e) => {
-        if (isMobile()) e.stopPropagation()
-    })
 })
-
 
 
 
