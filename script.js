@@ -31,18 +31,15 @@ function openModal(name) {
 // close with animation
 function closeModal(name) {
     const modal = document.getElementById('modal-' + name)
-
     modal.classList.add('closing')
 
     modal.addEventListener('animationend', () => {
         modal.classList.remove('open')
         modal.classList.remove('closing')
-        modal.style.display = 'none'  
-        if (isMobile()) {
-            modal.style.left = ''
-            modal.style.top = ''
-            modal.style.transform = ''
-        }
+        modal.style.display = 'none'
+        modal.style.left = ''
+        modal.style.top = ''
+        modal.style.transform = ''
     }, { once: true })
 }
 

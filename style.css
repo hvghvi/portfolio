@@ -506,4 +506,15 @@ nav a.active {
         flex-wrap: wrap;
     }
 
+    @keyframes popIn {
+        0%   { transform: translate(-50%, -50%) scale(0.9); opacity: 0; }
+        60%  { transform: translate(-50%, -50%) scale(1.05); opacity: 1; }
+        100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    }
+
+    @keyframes popOut {
+        0%   { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+        40%  { transform: translate(-50%, -50%) scale(1.08); opacity: 1; }
+        100% { transform: translate(-50%, -50%) scale(0.9); opacity: 0; }
+    }
 }
