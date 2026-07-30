@@ -490,6 +490,10 @@ body.dark-mode .project-links {
     color: purple;
 }
 
+body.dark-mode .user-links {
+    color: white;
+}
+
 body.dark-mode .learning {
     color: purple;
 }
