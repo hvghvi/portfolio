@@ -9,13 +9,14 @@ Built as a deliberate learning exercise — every feature was written from scrat
 
 ## Features
 - Responsive in mobile devices
+- Dark-mode Feature
 - Draggable, stackable windows with z-index management
 - Open/close animations with pop-in and pop-out effects
 
 ## Future Improvements
-- Complete dark mode implementation
 - More Projects
 - Add sounds to improve interactiveness
+  
 
 
 ## Running Locally
