@@ -471,6 +471,10 @@ body.dark-mode .modal {
     color: #e0e0e0;
 }
 
+body.dark-mode .modal-top-bar p {
+    color: #e0e0e0;
+}
+
 body.dark-mode .modal-top-bar {
     background-color: #252525;
 }
@@ -482,7 +486,11 @@ body.dark-mode .modal-body ol {
     color: #e0e0e0;
 }
 
-.body.darkmode .project-links a{
+body.dark-mode .project-links {
+    color: purple;
+}
+
+body.dark-mode .learning {
     color: purple;
 }
 
